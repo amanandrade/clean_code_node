@@ -1,0 +1,28 @@
+{
+  "name": "clean_code_node",
+  "version": "1.0.0",
+  "description": "A backend application with clean architecture in node.js",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanandrade/clean_code_node.git"
+  },
+  "keywords": [
+    "clean",
+    "code",
+    "node.js"
+  ],
+  "author": "Amanda Martins Andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amanandrade/clean_code_node/issues"
+  },
+  "homepage": "https://github.com/amanandrade/clean_code_node#readme"
+}
