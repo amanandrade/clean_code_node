@@ -1,7 +1,7 @@
 # clean_code_node
 A backend application with clean architecture in node.js
 
-## Sample application
+## Sample application:
 An initial use case for books managing.
 The app holds a list of books information and their readers. 
 
