@@ -9,6 +9,6 @@ The app holds a list of books information and their readers.
 - Book registration form
 - User registration form
 
-# Stacks:
+## Stacks:
 - Node.js API
 - MySQL database
