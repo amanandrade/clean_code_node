@@ -1,8 +1,10 @@
 const express = require('express')
+const endpoints = require('./src/web/endpoints.js')
+
 const app = express()
-const port = 3000
+const PORT = 3000
 
-// endpoint test:
-app.get('/', (req,res) => res.send("Hello readers!"))
+app.use('/', endpoints)
+app.use(express.json())
 
-app.listen(port, () => console.log("Backend server runnning on 3000"))
+app.listen(PORT, () => console.log(`Backend server running on ${PORT}`))

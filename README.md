@@ -12,3 +12,7 @@ The app holds a list of books information and their readers.
 ## Stacks:
 - Node.js API / Express
 - MySQL database
+
+## Get start
+- `npm start` for production
+- `npm run dev` for development
