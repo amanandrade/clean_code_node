@@ -13,6 +13,17 @@ The app holds a list of books information and their readers.
 - Node.js API / Express
 - MySQL database
 
-## Get start
+## Get start:
 - `npm start` for production
 - `npm run dev` for development
+
+## Use Case:
+
+User can: 
+    - create account
+    - find single user by id
+    - find list of users
+    - delete account
+    - register book
+    - search book by title
+    - search book by author
