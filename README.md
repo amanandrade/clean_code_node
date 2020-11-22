@@ -11,7 +11,7 @@ The app holds a list of books information and their readers.
 
 ## Stacks:
 - Node.js API / Express
-- MySQL database
+- MongoDB database
 
 ## Get start:
 - `npm start` for production
@@ -20,10 +20,10 @@ The app holds a list of books information and their readers.
 ## Use Case:
 
 User can: 
-    - create account
-    - find single user by id
-    - find list of users
-    - delete account
-    - register book
-    - search book by title
-    - search book by author
+- create account
+- find single user by id
+- find list of users
+- delete account
+- register book
+- search book by title
+- search book by author
