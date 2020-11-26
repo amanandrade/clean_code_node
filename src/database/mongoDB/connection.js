@@ -1,22 +1,28 @@
-let mongoose = require("mongoose");
+let mongoose = require('mongoose');
 
-// Use ES6 Promises for mongoose
-// mongoose.Promise = global.Promise;
-// mongoose.set('useNewUrlParser', true);
+mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:5000'), {
-    useMongoClient: true,
+const config = {
+    uri: "mongodb://localhost:27017/node-mongoose",
+    options: {
+      useNewUrlParser: true,
+      useFindAndModify: false,
+      useCreateIndex: true,
+      useUnifiedTopology: true
+    },
 }
 
-mongoose.connection.once('open', function () {
-    console.log('Connection has been made')
-}).on('error', function (error) {
-    console.log('Connection error', error);
-}).on('disconnected', function (){
-    console.log('Connnection disconnected');
+mongoose.connect(config.uri, config.options)
+
+mongoose.connection
+    .on('open', () => {
+    console.log('Connection to database has been made.')
+})
+    .on('error', () => {
+        throw new Error('Failed to connect to database.');
+})
+    .on('disconnected', () => {
+    console.log('Database disconnected');
 })
 
 module.exports = mongoose;
-
-// https://mannhowie.com/clean-architecture-node
-// https://medium.com/better-programming/node-clean-architecture-deep-dive-ab68e523554b

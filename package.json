@@ -4,9 +4,13 @@
   "description": "A backend application with clean architecture in node.js",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "babel": "^6.23.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.16"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.8",
+    "@babel/node": "^7.12.6",
     "nodemon": "^2.0.6"
   },
   "scripts": {

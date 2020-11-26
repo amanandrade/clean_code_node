@@ -14,8 +14,10 @@ The app holds a list of books information and their readers.
 - MongoDB database
 
 ## Get start:
-- `npm start` for production
-- `npm run dev` for development
+- `npm install` to install dependencies
+- `npm start` for run production
+- `npm run dev` for run development
+- `.\src\database\mongoDB\runDatabase.sh` run local database on docker <!-- must to incorporate this command on start -->
 
 ## Use Case:
 
