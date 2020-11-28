@@ -1,4 +1,4 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
@@ -19,7 +19,7 @@ mongoose.connection
     console.log('Connection to database has been made.')
 })
     .on('error', () => {
-        throw new Error('Failed to connect to database.');
+        throw new Error(err, 'Failed to connect to database.');
 })
     .on('disconnected', () => {
     console.log('Database disconnected');
