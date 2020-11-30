@@ -1,10 +1,10 @@
 module.exports = class IUserRepository {
 
-    create(domainUser){
+    create(modelUser){
         throw new Error('ERR_METHOD_NOT_IMPLEMENTED');
     }
 
-    update(domainUser){
+    update(modelUser){
         throw new Error('ERR_METHOD_NOT_IMPLEMENTED');
     }
 
@@ -12,11 +12,11 @@ module.exports = class IUserRepository {
         throw new Error('ERR_METHOD_NOT_IMPLEMENTED');
     }
 
-    get(domainUser){
+    get(modelUser){
         throw new Error('ERR_METHOD_NOT_IMPLEMENTED');
     }
 
-    getByEmail(domainUser){
+    getByEmail(modelUser){
         throw new Error('ERR_METHOD_NOT_IMPLEMENTED');
     }
 
