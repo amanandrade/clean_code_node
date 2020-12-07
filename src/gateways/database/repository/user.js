@@ -3,6 +3,7 @@ const userSchema = require('../mongoDB/userSchema')
 const IUserRepository = require('../../../interfaces/repository');
 
 module.exports = class extends IUserRepository{
+    //implements
     constructor(){
         super();
     }
