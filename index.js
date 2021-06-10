@@ -1,14 +1,13 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const mainRoute = require('./src/gateways/web/routes/main.js')
 const database = require('./src/gateways/database/mongoDB/connection.js')
 const userRoute = require('./src/gateways/web/routes/user.js')
 // const bookRoute = require('./src/web/routes/books.js')
 
 const app = express()
-const PORT = 3000
+const PORT = 8080
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
 
 app.use('/', mainRoute)
 app.use('/user', userRoute)

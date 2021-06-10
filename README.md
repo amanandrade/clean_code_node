@@ -17,7 +17,7 @@ The app holds a list of books information and their readers.
 - `npm install` to install dependencies
 - `npm start` for run production
 - `npm run dev` for run development
-- `.\src\database\mongoDB\runDatabase.sh` run local database on docker <!-- must to incorporate this command on start -->
+- `.\src\gateways\database\mongoDB\runDatabase.sh` run local database on docker <!-- must to incorporate this command on start -->
 
 ## Use Case:
 
