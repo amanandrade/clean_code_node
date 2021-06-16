@@ -1,0 +1,49 @@
+version: '3'
+
+services: 
+    nodejs:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        image: node:14
+        container_name: nodejs
+        restart: unless-stopped
+        # env_file: .env
+        environment: 
+            - MONGO_USERNAME=root
+            - MONGO_PASSWORD="123ABC"
+            - MONGO_HOSTNAME=localhost
+            - MONGO_PORT="27017"
+            - MONGO_DB=dbooks
+        ports:
+            - "8080:8080"
+        volumes: 
+            - .:/home/node/app
+            - node_modules:/home/node/app/node_modules
+        networks: 
+            - app-network
+        depends_on: 
+            - dbooks
+
+    dbooks:
+        image: mongo:4.1.8-xenial
+        container_name: dbooks
+        restart: unless-stopped
+        # env_file: .env
+        environment: 
+            - MONGO_INITDB_ROOT_USERNAME=root
+            - MONGO_INITDB_ROOT_PASSWORD="123ABC"
+        volumes: 
+            - dbdata:/data/dbooks
+        ports: 
+            - "27017:27017"
+        networks: 
+            - app-network
+    
+networks: 
+    app-network: 
+        driver: bridge
+
+volumes: 
+    dbdata:
+    node_modules:
