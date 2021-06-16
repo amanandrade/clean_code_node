@@ -1,12 +1,12 @@
 version: '3'
 
 services: 
-    nodejs:
+    app:
         build: 
             context: .
             dockerfile: Dockerfile
         image: node:14
-        container_name: nodejs
+        container_name: app
         restart: unless-stopped
         # env_file: .env
         environment: 
@@ -23,18 +23,18 @@ services:
         networks: 
             - app-network
         depends_on: 
-            - dbooks
+            - db
 
-    dbooks:
+    db:
         image: mongo:4.1.8-xenial
-        container_name: dbooks
+        container_name: db
         restart: unless-stopped
         # env_file: .env
         environment: 
             - MONGO_INITDB_ROOT_USERNAME=root
             - MONGO_INITDB_ROOT_PASSWORD="123ABC"
         volumes: 
-            - dbdata:/data/dbooks
+            - dbdata:/data/db
         ports: 
             - "27017:27017"
         networks: 
